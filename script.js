@@ -4,7 +4,7 @@ window.addEventListener('load', function () {
 })
 
 var serverStatus = new XMLHttpRequest();
-serverStatus.open('GET', 'https://api.mcsrvstat.us/2/tomakosmp.ddns.net', true);
+serverStatus.open('GET', 'https://mcapi.us/server/status?ip=tomakosmp.ddns.net', true);
 serverStatus.onload = function (e) {
     const resp = JSON.parse(serverStatus.response);
     if (resp.online == true)  document.getElementById("visitor-action").style.display = "initial";
