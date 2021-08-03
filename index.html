@@ -7,7 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-type" value="text/html; charset=UTF-8" />
 		<link rel="shortcut icon" type="image/png" href="resources/title.png"/>
-
 	</head>
 	<body>
 		<script type="text/javascript" src="script.js"></script>
@@ -21,19 +20,60 @@
 			<img src="resources/images/top.png">
 			<p>Tomako is the new SMP with new and improved performance <a href="https://papermc.io/">Paper</a> server software with Bedrock client support using <a href="https://geysermc.org/">Geyser</a> and more features coming soon to the server, focusing on improve player experience.</p>
 			<p>So... What are you waiting for?</p>
-			<div id="wrapper">
+			<div id="wrapper">	
+				<span id="is-offline" style="display: none;">
+					<p>...wait, it seems the server is offline right now. Come back later!</p>
+					<p>Or scroll down for instruction on adding TomakoSMP to your server list.</p>
+				</span>
 				<div id="visitor-action" style="display: none;">
-					<a href=""><button>Join now</button></a>
+					<button onclick="document.getElementById('adding-to-server-list').scrollIntoView()">Join now</button>
 					<span> or </span> 
 					<a href="http://tomakosmp.ddns.net:8123/"><button>View map</button></a>
 				</div>
-				<br>
-				<span id="is-offline" style="display: none;">
-					<p>...wait, it seems the server is offline right now. Come back later!</p>
-					<p>(is it the weekend? it might be online right now... who knows)</p>
-				</span>
 			</div>
+			<hr>
+			<h2>Server IP</h2>
+			<p>Please use Java 1.17.1 or Bedrock 1.17.X. Other versions might not be compatible with the server software, hence preventing you from connecting you to the server.</p>
+			<strong>tomakosmp.ddns.net</strong>
+			<p>Keep the port as it is, do not change them.</p>
+			<p>Scroll down if you don't know how to add server IP to your server list.</p>
 			<br>
+			<img src="resources/images/local.png">
+			<div id="adding-to-server-list">
+				<h2>Adding TomakoSMP to your server list</h2>
+				<p>I am playing on...</p>
+				<div id="tab">
+					<button class="tablinks" onclick="platform(event, 'Java')" id="defaultOpen">Java / PC</button>
+					<button class="tablinks" onclick="platform(event, 'Bedrock')">Bedrock / Mobile</button>
+				</div>
+				<div id="Java" class="tabcontent">
+					<p>Start your launcher and download the version mentioned above. It is recommended to use Optifine for better performance</p>
+					<p>Open Minecraft and head over to <span class="game-button-java">Multiplayer</span>.</p>
+					<img src="resources/images/java/1.png">
+					<p>Click on <span class="game-button-java">Add Server</span> to add a new server.</p>
+					<img src="resources/images/java/2.png">
+					<p>Type in the following infomation and click <span class="game-button-java">Done</span>.</p>
+					<img src="resources/images/java/3.png">
+					<p>You will be back to this screen, click on <span class="game-button-java">Join Server</span> or double-click on the server to join the game!</p>
+					<img src="resources/images/java/4.png" alt="">
+				</div>
+				<div id="Bedrock" class="tabcontent">
+					<p style="color: red;">Please disable auto-update app to prevent Minecraft from being updated to version that is not compatible with the server!</p>
+					<p>Start Minecraft and press <span class="game-button-bedrock">Play</span>.</p>
+					<img src="resources/images/bedrock/1.png">
+					<p>Head over to <span class="game-button-bedrock">Servers</span> tab (highlighted in green in screenshot below) and scroll down until the bottom.</p>
+					<img src="resources/images/bedrock/2.png">
+					<p>Press on <span class="game-button-bedrock">Add Server</span> button.</p>
+					<img src="resources/images/bedrock/3.png">
+					<p>Fill in the information below and press <span class="game-button-bedrock">Save</span> to save it to your server list.</p>
+					<img src="resources/images/bedrock/4.png">
+					<p>You will be back to this screen, press on the entry you added and press <span class="game-button-bedrock">Join Server</span> to join the game!</p>
+					<img src="resources/images/bedrock/5.png">
+				</div>
+			</div>
+			<p>Website made with love and passion by <a href="https://twitter.com/soraboken">Rosetta</a>.</p>
+			<p>"Minecraft" is a trademark of Mojang AB. More info at <a href="minecraft.net">their official website</a>.</p>
 		</div>
+		<br>
 	</body>
 </html>
