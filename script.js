@@ -3,16 +3,6 @@ window.addEventListener('load', function () {
     document.getElementById("defaultOpen").click();
 })
 
-var serverStatus = new XMLHttpRequest();
-serverStatus.open('GET', 'https://mcapi.us/server/status?ip=tomakosmp.ddns.net', true);
-serverStatus.onload = function (e) {
-    const resp = JSON.parse(serverStatus.response);
-    if (resp.online == true)  document.getElementById("visitor-action").style.display = "initial";
-    else document.getElementById("is-offline").style.display = "initial";
-};
-
-serverStatus.send();
-
 function platform(evt, platformName) {
     // Declare all variables
     var i, tabcontent, tablinks;
